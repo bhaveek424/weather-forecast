@@ -22,13 +22,6 @@ function WeatherCard({
   sunset,
 }: WeatherCardProps) {
   return (
-    // <Card>
-    //   <CardHeader>
-    //     <CardTitle>
-    //     {prefix}
-    //     </CardTitle>
-    //   </CardHeader>
-    // </Card>
     <div className="flex flex-col justify-end flex-1 flex-shrink-0 basis-1/6">
       <div className="text-center mb-3 text-lg font-semibold text-gray-600">
         {prefix}

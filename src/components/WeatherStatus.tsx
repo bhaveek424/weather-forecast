@@ -18,13 +18,11 @@ function WeatherStatus() {
               ? `${information.name} ${
                   information.state ? ', ' + information.state : ''
                 }, ${information.country}`
-              : '--///--'}
+              : 'Location Unavailable. Please enter a location.'}
           </h1>
         </div>
         <div className="text-gray-600">
-          {information
-            ? convertToDMS(information.lat, information.lon)
-            : "--°--'--'' N/S & --°--'--'' E/W"}
+          {information ? convertToDMS(information.lat, information.lon) : ''}
         </div>
       </div>
     </div>
