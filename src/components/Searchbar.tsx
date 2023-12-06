@@ -25,7 +25,7 @@ function Searchbar() {
               <Loader2 className="animate-spin w-4 h-4 mx-auto" />
             </span>
           ) : results === null ? (
-            <span className="my-5 text-red-600">An unknown error occurred</span>
+            <span className="my-5 text-red-600">Unknown error occurred</span>
           ) : !searchTerm ? (
             <span>Search for a city...</span>
           ) : results.length !== 0 ? (
@@ -47,7 +47,7 @@ function Searchbar() {
               }}
             />
           ) : (
-            <span>No matching result found</span>
+            <span>No results found</span>
           )}
         </div>
       )}
