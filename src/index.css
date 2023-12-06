@@ -71,6 +71,10 @@ body {
   background-attachment: fixed;
 }
 
+.card {
+  background: linear-gradient(180deg, #464646 0%, #1d2540 100%);
+}
+
 @layer base {
   * {
     @apply border-border;

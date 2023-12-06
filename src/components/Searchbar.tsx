@@ -1,14 +1,14 @@
 import { Loader2, Search } from 'lucide-react';
 import useSearch from '@/hooks/use-search';
 import type { SearchResult, WeatherLocations } from '@/api/types';
-import useProvider from '@/context/useProvider';
+import useWeather from '@/context/useProvider';
 
 function Searchbar() {
   const [searchTerm, setSearchTerm, results, isLoading] = useSearch();
-  const { setPosition, setInformation } = useProvider();
+  const { setPosition, setInformation } = useWeather();
 
   return (
-    <div className="flex bg-white rounded h-12 w-full md:max-w-md relative items-center ">
+    <div className="flex bg-white rounded h-11 w-full md:max-w-sm relative items-center ">
       <input
         type="search"
         className="bg-transparent outline-none flex-1 rounded-sm placeholder:italic px-3 "

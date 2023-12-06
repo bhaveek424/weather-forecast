@@ -32,7 +32,7 @@ export type AppContextValue = {
   setPosition: React.Dispatch<React.SetStateAction<GeoPosition>>;
   information: GeoInformation;
   setInformation: React.Dispatch<React.SetStateAction<GeoInformation>>;
-  forecast: GeoCollection;
+  forecast: GeoCollection | null;
   setForecast: React.Dispatch<React.SetStateAction<GeoCollection>>;
 };
 
