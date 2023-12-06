@@ -37,13 +37,13 @@ function LocationFetcher() {
 
   return (
     <div className="fixed inset-0 bg-black/40 flex justify-center items-center">
-      <div className="bg-black/60 text-white p-3 pl-5 rounded-full inline-flex items-center gap-3">
+      <div className="bg-black/60 text-white p-3 pl-5 rounded-sm inline-flex items-center gap-3">
         {failed ? (
           <>
             Failed to get Location services
             <button
               type="button"
-              className="transition-all px-3 py-1 rounded-full hover:bg-white/20 border border-white/20"
+              className="transition-all px-3 py-1 rounded-sm hover:bg-white/20 border border-white/20"
               onClick={refetchGeoLocation}>
               Try again
             </button>
