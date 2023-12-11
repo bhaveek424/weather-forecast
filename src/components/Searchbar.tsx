@@ -1,7 +1,7 @@
 import { Loader2, Search } from 'lucide-react';
 import useSearch from '@/hooks/use-search';
 import type { SearchResult, WeatherLocations } from '@/api/types';
-import useWeather from '@/context/useProvider';
+import useWeather from '@/context/useWeather';
 
 function Searchbar() {
   const [searchTerm, setSearchTerm, results, isLoading] = useSearch();

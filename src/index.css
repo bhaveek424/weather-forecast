@@ -83,3 +83,28 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for WebKit/Blink browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style the scrollbar for WebKit/Blink browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+  background-color: #a5a5a5;
+  border-radius: 4px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}

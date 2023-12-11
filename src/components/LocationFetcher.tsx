@@ -1,4 +1,4 @@
-import useWeather from '@/context/useProvider';
+import useWeather from '@/context/useWeather';
 import { Loader2 } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -28,17 +28,20 @@ function LocationFetcher() {
     getGeoPosition();
   }, [getGeoPosition]);
 
-  const refetchGeoLocation = () => {
-    setFailed(false);
-    getGeoPosition();
-  };
+  // const refetchGeoLocation = () => {
+  //   setFailed(false);
+  //   getGeoPosition();
+  // };
 
   if (!loading) return null;
+  if (failed) {
+    return;
+  }
 
   return (
     <div className="fixed inset-0 bg-black/40 flex justify-center items-center">
       <div className="bg-black/60 text-white p-3 pl-5 rounded-sm inline-flex items-center gap-3">
-        {failed ? (
+        {/* {failed ? (
           <>
             Failed to get Location services
             <button
@@ -53,7 +56,11 @@ function LocationFetcher() {
             <Loader2 className="animate-spin w-4 h-4" />
             Click Allow to fetch your location
           </>
-        )}
+        )} */}
+        <>
+          <Loader2 className="animate-spin w-4 h-4" />
+          Click Allow to fetch your location
+        </>
       </div>
     </div>
   );

@@ -23,3 +23,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+/home/hp/projects/xto10x/src/components/mistakes.js
+mistakes.js

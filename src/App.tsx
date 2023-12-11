@@ -9,7 +9,7 @@ function App() {
     <ContextProvider>
       <Header />
       <div className="w-full">
-        <main className="max-w-7xl mx-auto p-5 md:px-[100px] ">
+        <main className="w-full max-w-7xl mx-auto p-5 md:px-[100px] ">
           <WeatherStatus />
           <WeatherForecast />
         </main>

@@ -1,6 +1,6 @@
 import LocationIcon from '@/assets/icons/LocationIcon';
 import Searchbar from './Searchbar';
-import useWeather from '@/context/useProvider';
+import useWeather from '@/context/useWeather';
 import { convertToDMS } from '@/lib/utils';
 
 function WeatherStatus() {
@@ -18,7 +18,7 @@ function WeatherStatus() {
               ? `${information.name} ${
                   information.state ? ', ' + information.state : ''
                 }, ${information.country}`
-              : 'Location Unavailable. Please enter a location.'}
+              : 'Please enter a location.'}
           </h1>
         </div>
         <div className="text-gray-600">
