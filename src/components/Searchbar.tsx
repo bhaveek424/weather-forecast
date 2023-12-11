@@ -2,10 +2,18 @@ import { Loader2, Search } from 'lucide-react';
 import useSearch from '@/hooks/use-search';
 import type { SearchResult, WeatherLocations } from '@/api/types';
 import useWeather from '@/context/useWeather';
+import { useEffect, useRef } from 'react';
 
 function Searchbar() {
   const [searchTerm, setSearchTerm, results, isLoading] = useSearch();
   const { setPosition, setInformation } = useWeather();
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    inputRef.current?.focus();
+  }, []);
 
   return (
     <div className="flex bg-white rounded h-11 w-full md:max-w-sm relative items-center ">
@@ -13,6 +21,7 @@ function Searchbar() {
         type="search"
         className="bg-transparent outline-none flex-1 rounded-sm placeholder:italic px-3 "
         value={searchTerm}
+        ref={inputRef}
         id="search"
         onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Search your city here..."
